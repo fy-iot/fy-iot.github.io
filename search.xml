@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2019/12/05/test/"/>
+      <url>/2019/12/05/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>单片机可复用编程框架-总纲01</title>
+      <link href="/2019/12/05/dan-pian-ji-ke-fu-yong-bian-cheng-kuang-jia-zong-gang-01/"/>
+      <url>/2019/12/05/dan-pian-ji-ke-fu-yong-bian-cheng-kuang-jia-zong-gang-01/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>相信大家都会有这样的体验，自己写过很多代码，但是代码的可重用性不高。 当接触新的项目时，要在之前的工程上做许多改动，关键的问题是还可能因为疏忽，导致程序存在一些隐性的bug,给后期产品的稳定运行埋下了隐患。基于此，我想寻求一种比较合理的软件架构来减少代码的耦合性，提高模块的复用性和可维护性。我将要讨论的软件架构是基于单片机裸机，因为带操作系统的，系统已经帮我们解决了这部分问题。</p><h2 id="理想的目标"><a href="#理想的目标" class="headerlink" title="理想的目标"></a>理想的目标</h2><h3 id="1-系统分层架构"><a href="#1-系统分层架构" class="headerlink" title="1. 系统分层架构"></a>1. 系统分层架构</h3><ul><li>驱动层<ul><li>提供硬件的基本操作，如gpio口电平设置，电平翻转等接口</li></ul></li><li>适配层<ul><li>适配层的作用是根据应用层的通用接口，匹配到底层的驱动代码</li></ul></li><li>抽象接口层<ul><li>抽象接口层提供便于理解的通用接口，用户只需要传入必要的参数，就可以自动完成对底层硬件的控制和访问。</li></ul></li><li>应用层<ul><li>应用层专注于业务逻辑的实现，需要系统实现相关功能时，调用抽象接口层的函数。</li></ul></li></ul><h3 id="2-系统代码组成"><a href="#2-系统代码组成" class="headerlink" title="2. 系统代码组成"></a>2. 系统代码组成</h3><ul><li><p>配置文件</p><ul><li>系统剪裁    </li><li>功能配置  （如系统打印串口选择用哪个串口、系统时钟用内部的还是外部的）</li><li>常量配置  （如系统时钟频率、串口波特率等）    </li></ul></li><li><p>驱动文件</p><ul><li>时钟配置<ul><li>gpio驱动</li><li>串口驱动</li><li>看门狗驱动</li><li>定时器驱动</li><li>I2C驱动（软件方式/硬件方式）</li><li>SPI驱动</li><li>FLASH驱动 (sfud 通用驱动）</li><li>EEPROM驱动</li><li>RTC驱动</li><li>低功耗配置</li></ul></li></ul></li><li><p>适配层文件</p></li><li><p>抽象接口层文件</p></li></ul><h3 id="3-系统架构相关"><a href="#3-系统架构相关" class="headerlink" title="3. 系统架构相关"></a>3. 系统架构相关</h3><ul><li><p>系统框架</p><ul><li>时间片轮询</li><li>事件驱动</li><li>状态机</li></ul></li><li><p>应用层常用框架</p><ul><li>消息发送-等待模型  （ 适用于按步骤发送数据 –等待返回结果– 超时重发模型）</li><li>串口数据解析模型   （适用于类似于Modbus通信协议的协议解析）</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 单片机 </category>
+          
+          <category> 软件框架 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 单片机 </tag>
+            
+            <tag> 软件框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2019/11/30/hello-world/"/>
       <url>/2019/11/30/hello-world/</url>
@@ -26,7 +68,7 @@
       
       <categories>
           
-          <category> Markdown </category>
+          <category> 单片机 </category>
           
       </categories>
       
